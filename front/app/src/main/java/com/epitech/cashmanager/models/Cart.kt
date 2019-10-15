@@ -1,6 +1,8 @@
 package com.epitech.cashmanager.models
 
-class Cart {
+
+// todo : verify
+object Cart {
    private var articles : MutableList<Article> = mutableListOf()
 
 
