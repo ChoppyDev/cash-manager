@@ -1,4 +1,4 @@
-package com.epitech.stdlib
+package com.epitech.stdlib.Singletons
 
 import java.util.*
 
