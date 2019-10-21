@@ -15,10 +15,14 @@ import java.util.*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 85b35e8... new version with navigation
 =======
 >>>>>>> parent of 85b35e8... new version with navigation
 
+=======
+import com.epitech.stdlib.Logger
+>>>>>>> parent of 77ab87e... Merge branch 'model' of https://github.com/ChoppyDev/cash-manager into model
 =======
 import com.epitech.stdlib.Logger
 >>>>>>> parent of 77ab87e... Merge branch 'model' of https://github.com/ChoppyDev/cash-manager into model
@@ -49,9 +53,13 @@ class MainActivity : AppCompatActivity() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 85b35e8... new version with navigation
 =======
 >>>>>>> parent of 85b35e8... new version with navigation
+=======
+
+>>>>>>> parent of 77ab87e... Merge branch 'model' of https://github.com/ChoppyDev/cash-manager into model
 =======
 
 >>>>>>> parent of 77ab87e... Merge branch 'model' of https://github.com/ChoppyDev/cash-manager into model

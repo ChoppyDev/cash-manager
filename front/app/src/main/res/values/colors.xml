@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
@@ -18,6 +19,11 @@
 >>>>>>> parent of 85b35e8... new version with navigation
 =======
 >>>>>>> parent of 85b35e8... new version with navigation
+=======
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+>>>>>>> parent of 77ab87e... Merge branch 'model' of https://github.com/ChoppyDev/cash-manager into model
 =======
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
