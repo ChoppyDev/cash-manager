@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <string name="title_activity_register">RegisterActivity</string>
+>>>>>>> parent of 85b35e8... new version with navigation
 =======
     <string name="title_activity_register">RegisterActivity</string>
 >>>>>>> parent of 85b35e8... new version with navigation

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 =======
+=======
+>>>>>>> parent of 85b35e8... new version with navigation
     <color name="colorPrimary">#5DDAFF</color>
     <color name="colorPrimaryDark">#0093FF</color>
     <color name="colorAccent">#5DDAFF</color>
     <color name="buttonBlue">#1779FF</color>
+<<<<<<< HEAD
+>>>>>>> parent of 85b35e8... new version with navigation
+=======
 >>>>>>> parent of 85b35e8... new version with navigation
 </resources>

@@ -1,15 +1,21 @@
 package com.epitech.cashmanager
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 =======
+=======
+>>>>>>> parent of 85b35e8... new version with navigation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.epitech.stdlib.Singletons.Logger
 import java.util.*
+<<<<<<< HEAD
+>>>>>>> parent of 85b35e8... new version with navigation
+=======
 >>>>>>> parent of 85b35e8... new version with navigation
 
 class MainActivity : AppCompatActivity() {
@@ -18,8 +24,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
+=======
+>>>>>>> parent of 85b35e8... new version with navigation
         val button: Button = findViewById(R.id.button2)
         val loginButton: Button = findViewById(R.id.connexionButton)
         val i = Intent(this, RegisterActivity::class.java)
@@ -39,5 +48,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+<<<<<<< HEAD
+>>>>>>> parent of 85b35e8... new version with navigation
+=======
 >>>>>>> parent of 85b35e8... new version with navigation
 }

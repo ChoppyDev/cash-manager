@@ -15,6 +15,11 @@
           </set>
         </option>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useAutoImport" value="true" />
+>>>>>>> parent of 85b35e8... new version with navigation
 =======
         <option name="resolveModulePerSourceSet" value="false" />
         <option name="useAutoImport" value="true" />
