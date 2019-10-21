@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context=".Settings"
+             android:background="@android:color/darker_gray">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/hello_blank_fragment"
+    />
+    <LinearLayout android:orientation="vertical" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText
+            android:hint="@string/url"
+            android:id="@+id/url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <EditText
+            android:hint="@string/password"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/saveButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_gravity="center_horizontal"
+            android:text="Connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
