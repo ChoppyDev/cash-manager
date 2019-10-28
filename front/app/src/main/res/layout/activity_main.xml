@@ -6,14 +6,8 @@
 
     <data>
         <variable
-            name="title"
-            type="String" />
-        <variable
-            name="login"
-            type="String" />
-        <variable
-            name="register"
-            type="String" />
+            name="strings"
+            type="com.epitech.cashmanager.MainActivity.I18n" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,26 +22,26 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="78dp"
             android:background="@drawable/main_button"
-            android:text="@{login}"
+            android:text="@{strings.loginLabel}"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/password_input" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/login_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintBottom_toTopOf="@+id/password_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/password_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -55,14 +49,14 @@
             app:layout_constraintBottom_toTopOf="@+id/loginButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintTop_toBottomOf="@+id/login_label" />
 
         <Button
-            android:id="@+id/registerButton"
+            android:id="@+id/register_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{register}"
-            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            android:text="@{strings.registerLabel}"
+            app:layout_constraintBottom_toTopOf="@+id/password_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"

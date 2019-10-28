@@ -1,6 +1,7 @@
 package com.epitech.cashmanager.locale
 
 import com.epitech.cashmanager.MainActivity
+import com.epitech.cashmanager.RegisterActivity
 import com.epitech.cashmanager.locale.languages.enI18n
 import com.epitech.cashmanager.locale.languages.frI18n
 import java.util.*
@@ -10,7 +11,8 @@ import java.util.*
 
 class AllI18n(
     val langage : AppLanguage,
-    val main : MainActivity.i18n
+    val main : MainActivity.I18n,
+    val register : RegisterActivity.I18n
 )
 
 //get all I18n for selected language
@@ -26,7 +28,3 @@ enum class AppLanguage(val iso639_1 : String, val iso639_2 : String, val javaLoc
 }
 
 //implements the i18n interface Skeleton
-interface MetaI18n {
-    val title : String
-}
-

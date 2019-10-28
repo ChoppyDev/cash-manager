@@ -6,14 +6,14 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.epitech.cashmanager.databinding.ActivityMainBinding
+
 import com.epitech.cashmanager.locale.allI18n
-import com.epitech.cashmanager.locale.MetaI18n
 import com.epitech.stdlib.Singletons.Logger
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    class i18n (
+    class I18n (
         val title: String,
         val loginLabel: String,
         val registerLabel: String
@@ -26,12 +26,11 @@ class MainActivity : AppCompatActivity() {
         val binding : ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         //langs bindings
-        binding.title = activityI18n.title
-        binding.login = activityI18n.loginLabel
-        binding.register = activityI18n.registerLabel
+        binding.strings = allI18n.main
 
 
-        val button: Button = findViewById(R.id.registerButton)
+
+        val button: Button = findViewById(R.id.register_button)
         val loginButton: Button = findViewById(R.id.loginButton)
         val i = Intent(this, RegisterActivity::class.java)
         val loginIntent = Intent(this, CartActivity::class.java)
