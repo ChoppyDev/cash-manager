@@ -1,0 +1,22 @@
+package com.epitech.cashmanager.models
+
+import cash_manager.epitech.cashmanager.model.Article
+
+
+// todo : verify
+object Cart {
+   private var articles : MutableList<Article> = mutableListOf()
+
+
+    //get total price of cart
+    fun total() : Float {
+        var total = 0f
+        for(a in this.articles)
+            total+=  (a.price * a.quantity)
+        return total
+    }
+
+    fun add(article: Article) : Unit {
+        this.articles.add(article)
+    }
+}
