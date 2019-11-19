@@ -2,7 +2,7 @@ package com.epitech.cashmanager.controller;
 
 import com.epitech.cashmanager.model.Product;
 import com.epitech.cashmanager.repository.ProductRepository;
-import com.epitech.cashmanager.excepton.ResourceNotFound;
+import com.epitech.cashmanager.exception.ResourceNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -78,6 +78,8 @@ public class ProductController {
                         .orElseThrow(() -> new ResourceNotFound("Product not found on :: " + productId));
 
         product.setName(productDetails.getName());
+        product.setPrice(productDetails.getPrice());
+        product.setQuantity(productDetails.getQuantity());
         product.setUpdatedAt(new Date());
         product.setCreatedAt(new Date());
         product.setCreatedBy("User");

@@ -24,6 +24,9 @@ public class Product {
     @Column(name = "price", nullable = false)
     private Integer price;
 
+    @Column(name = "quantity", nullable = false)
+    private Integer quantity;
+
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at")
@@ -89,12 +92,30 @@ public class Product {
     }
 
     /**
+     * Gets quantity.
+     *
+     * @return the quantity
+     */
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    /**
      * Sets price.
      *
      * @param price the price
      */
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    /**
+     * Sets quantity.
+     *
+     * @param quantity the quantity
+     */
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     /**
@@ -175,6 +196,7 @@ public class Product {
                 "id=" + id +
                 ", Name='" + name + '\'' +
                 ", Price='" + price + '\'' +
+                ", Quantity='" + quantity + '\'' +
                 ", createdAt=" + createdAt +
                 ", createdBy='" + createdBy + '\'' +
                 ", updatedAt=" + updatedAt +
