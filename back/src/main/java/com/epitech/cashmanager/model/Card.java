@@ -10,22 +10,25 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "products")
+@Table(name = "card")
 @EntityListeners(AuditingEntityListener.class)
-public class Product {
+public class Card {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name", nullable = false)
+
     private String name;
 
-    @Column(name = "price", nullable = false)
-    private Integer price;
+    @Column(name = "authorize", nullable = false)
 
-    @Column(name = "quantity", nullable = false)
-    private Integer quantity;
+    private boolean authorize;
+
+    @Column(name = "amount", nullable = false)
+
+    private double amount;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
@@ -45,6 +48,41 @@ public class Product {
     @LastModifiedBy
     private String updatedBy;
 
+    /**
+     * Gets amount.
+     *
+     * @return the amount
+     */
+    public double getAmount() {
+        return amount;
+    }
+
+    /**
+     * Sets amount.
+     *
+     * @param amount the amount
+     */
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    /**
+     * Gets authorize.
+     *
+     * @return the authorize
+     */
+    public boolean getAuthorize() {
+        return authorize;
+    }
+
+    /**
+     * Sets authorize.
+     *
+     * @param authorize the authorize
+     */
+    public void setAuthorize(boolean authorize) {
+        this.authorize = authorize;
+    }
 
     /**
      * Gets id.
@@ -82,41 +120,6 @@ public class Product {
         this.name = name;
     }
 
-    /**
-     * Gets price.
-     *
-     * @return the price
-     */
-    public Integer getPrice() {
-        return price;
-    }
-
-    /**
-     * Gets quantity.
-     *
-     * @return the quantity
-     */
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    /**
-     * Sets price.
-     *
-     * @param price the price
-     */
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    /**
-     * Sets quantity.
-     *
-     * @param quantity the quantity
-     */
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
 
     /**
      * Gets created at.
@@ -192,15 +195,14 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Card{" +
                 "id=" + id +
                 ", Name='" + name + '\'' +
-                ", Price='" + price + '\'' +
-                ", Quantity='" + quantity + '\'' +
+                ", Authorize='" + authorize + '\'' +
                 ", createdAt=" + createdAt +
                 ", createdBy='" + createdBy + '\'' +
                 ", updatedAt=" + updatedAt +
-                ", updatedby='" + updatedBy + '\'' +
+                ", updatedBy='" + updatedBy + '\'' +
                 '}';
     }
 }

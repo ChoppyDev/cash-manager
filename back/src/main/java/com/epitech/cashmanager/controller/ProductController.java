@@ -6,7 +6,6 @@ import com.epitech.cashmanager.exception.ResourceNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.HashMap;
@@ -33,8 +32,8 @@ public class ProductController {
     /**
      * Gets products by id.
      *
-     * @param productId the user id
-     * @return the users by id
+     * @param productId the product id
+     * @return the products by id
      * @throws ResourceNotFound the resource not found exception
      */
 
@@ -94,7 +93,7 @@ public class ProductController {
      * @return the map
      * @throws Exception the exception
      */
-    @DeleteMapping("/product/{id}")
+    @DeleteMapping("/products/{id}")
     public Map<String, Boolean> deleteProduct(@PathVariable(value = "id") Long productId) throws Exception {
         Product product =
                 productRepository
