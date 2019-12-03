@@ -81,7 +81,7 @@ public class CardController {
         card.setAuthorize(cardDetails.getAuthorize());
         card.setUpdatedAt(new Date());
         card.setCreatedAt(new Date());
-        card.setCreatedBy("User");
+        card.setUpdatedBy(cardDetails.getUpdatedBy());
         final Card updatedCard = cardRepository.save(card);
         return ResponseEntity.ok(updatedCard);
     }

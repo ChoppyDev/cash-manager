@@ -22,7 +22,7 @@ public class Product {
     private String name;
 
     @Column(name = "price", nullable = false)
-    private Integer price;
+    private Double price;
 
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
@@ -87,7 +87,7 @@ public class Product {
      *
      * @return the price
      */
-    public Integer getPrice() {
+    public Double getPrice() {
         return price;
     }
 
@@ -105,7 +105,7 @@ public class Product {
      *
      * @param price the price
      */
-    public void setPrice(Integer price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

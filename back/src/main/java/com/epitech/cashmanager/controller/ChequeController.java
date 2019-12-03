@@ -62,7 +62,7 @@ public class ChequeController {
     /**
      * Update cheque response entity.
      *
-     * @param chequeId the cheque id
+     * @param chequeId      the cheque id
      * @param chequeDetails the cheque details
      * @return the response entity
      * @throws ResourceNotFound the resource not found exception
@@ -81,7 +81,7 @@ public class ChequeController {
         cheque.setAuthorize((chequeDetails.getAuthorize()));
         cheque.setUpdatedAt(new Date());
         cheque.setCreatedAt(new Date());
-        cheque.setCreatedBy("User");
+        cheque.setUpdatedBy(chequeDetails.getUpdatedBy());
         final Cheque updatedCheque = chequeRepository.save(cheque);
         return ResponseEntity.ok(updatedCheque);
     }

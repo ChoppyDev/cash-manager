@@ -81,7 +81,7 @@ public class ProductController {
         product.setQuantity(productDetails.getQuantity());
         product.setUpdatedAt(new Date());
         product.setCreatedAt(new Date());
-        product.setCreatedBy("User");
+        product.setUpdatedBy(productDetails.getUpdatedBy());
         final Product updatedProduct = productRepository.save(product);
         return ResponseEntity.ok(updatedProduct);
     }

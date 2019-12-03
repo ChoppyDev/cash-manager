@@ -52,7 +52,7 @@ class ProductTests {
     public void testCreateProduct() {
         Product product = new Product();
         product.setName("name");
-        product.setPrice(10);
+        product.setPrice(10.0);
 
         ResponseEntity<Product> postResponse = restTemplate.postForEntity(getRootUrl() + "/products", product, Product.class);
         Assert.assertNotNull(postResponse);
