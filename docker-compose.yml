@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql-data:/var/local/mysql/data
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=cash_manager
+
+  back:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on: 
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/cash_manager?createDatabaseIfNotExist=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    command: mvn spring-boot:run
+
+volumes:
+  mysql-data:
+    driver: local
