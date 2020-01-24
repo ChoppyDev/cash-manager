@@ -1,53 +1,22 @@
 package com.epitech.cashmanager
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import com.epitech.cashmanager.databinding.ActivityMainBinding
 
-import com.epitech.cashmanager.locale.allI18n
-import com.epitech.stdlib.Singletons.Logger
-import java.util.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    class I18n (
-        val title: String,
-        val loginLabel: String,
-        val registerLabel: String
-    )
-
-    private val activityI18n  = allI18n.main
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding : ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
 
-        //langs bindings
-        binding.strings = allI18n.main
-
-
-
-        val button: Button = findViewById(R.id.register_button)
-        val loginButton: Button = findViewById(R.id.loginButton)
-        val i = Intent(this, RegisterActivity::class.java)
-        val loginIntent = Intent(this, CartActivity::class.java)
-
-        button.setOnClickListener {
-            startActivity(i)
+        fab.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
         }
-
-        loginButton.setOnClickListener {
-            startActivity(loginIntent)
-            this.finish() //finish login activity for security issues
-            // todo : Make a it in a better way
-        }
-        Logger.info("ISO ${Locale.getDefault().toString()}")
-        Logger.info("Lang of i18n ${allI18n.langage}")
-        Logger.noCommit("TESTSTSTSTTSTSTS")
     }
-
 
 }
