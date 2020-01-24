@@ -1,21 +1,22 @@
 package com.epitech.cashmanager.locale
 
-import com.epitech.cashmanager.MainActivity
-import com.epitech.cashmanager.RegisterActivity
 import com.epitech.cashmanager.locale.languages.enI18n
 import com.epitech.cashmanager.locale.languages.frI18n
 import java.util.*
 
 
 
-
+/**
+ * This is a class for app Translation
+ * This class is referencing all view translations for the application
+ * */
 class AllI18n(
-    val langage : AppLanguage,
-    val main : MainActivity.I18n,
-    val register : RegisterActivity.I18n
+    val langage : AppLanguage
 )
 
-//get all I18n for selected language
+/**
+ * This val is used to store all translations for the application
+ * */
 val allI18n : AllI18n = when(Locale.getDefault().toString()) {
         AppLanguage.FR.javaLocales -> frI18n
         AppLanguage.EN.javaLocales -> enI18n

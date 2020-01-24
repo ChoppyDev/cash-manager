@@ -2,15 +2,26 @@ package com.epitech.stdlib.Singletons
 
 import java.util.*
 
+
+/**
+* This is a Logger class helper to show console log with date and data
+* */
 object Logger {
 
-    //print a msg with No commit message
+    fun log(prefix : String, msg : String) {
+        println(" [$prefix] - ${Calendar.getInstance().time} - $msg")
+    }
+
     @Deprecated("This code contains a no commit log")
     fun noCommit(f : String) {
-        println(" [NO COMMIT] - ${Calendar.getInstance().time} - $f")
+       log("NO COMMIT", f)
     }
 
     fun info(f: String) {
-        println(" [INFO] - ${Calendar.getInstance().time} - $f")
+        log("INFO", f)
+    }
+
+    fun debug(f: String) {
+        log("DEBUG", f)
     }
 }
